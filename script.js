@@ -1,7 +1,7 @@
 function printSD() {
-    // form
+    // haal form op
     let form = document.getElementById('calculatorForm');
-    let values = "";
+    let values = '';
     // zet de waarde van values op de input van de form
     values += form.elements[0].value;
     // zet values om naar een array, bij elke komma in de string
@@ -14,10 +14,11 @@ function printSD() {
         console.log(typeof values[i]);
     }
     console.log(values);
-    sd = returnSD(values);
-    document.getElementById('output').innerHTML = "De standaarddeviatie is: " + sd;
+    let sd = returnSD(values);
+    document.getElementById('output').innerHTML = 'De standaarddeviatie is: ' + sd;
 }
 
+// bereken standaard deviatie
 function returnSD(arr) {
     // stap 1: bereken het gemiddelde
     let n = returnN(arr);
@@ -34,6 +35,7 @@ function returnSD(arr) {
     return standardDeviation;
 } 
 
+// bereken aantal waardes
 function returnN(arr) {
     let n = 0;
     for(let i = 0; i < arr.length; i++) {
@@ -42,6 +44,7 @@ function returnN(arr) {
     return n;
 }
 
+// bereken gemiddelde
 function returnMean(arr, n) {
     let sum = 0;
     for(let i = 0; i < arr.length; i++) {
@@ -51,6 +54,7 @@ function returnMean(arr, n) {
     return mean;
 }
 
+// bereken som van machten
 function returnSumOfPowers(arr, mean) {
     let sumOfPowers = 0;
     for(let i = 0; i < arr.length; i++) {
@@ -64,6 +68,7 @@ function returnSumOfPowers(arr, mean) {
     return sumOfPowers;
 }
 
+// bereken variantie
 function returnVariance(sumOfPowers, n) {
     let variance = sumOfPowers / n;
     return variance;
