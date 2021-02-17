@@ -9,7 +9,7 @@ function printStandardDeviation() {
     let form = document.getElementById('calculatorForm');
     let values = '';
     // zet de waarde van values op de input van de form
-    values += form.elements[0].value;
+    values = form.elements[0].value;
     // zet values om naar een array, bij elke komma in de string
     values = values.split(',');
     // verwijder spaties uit elke string van values
@@ -20,10 +20,12 @@ function printStandardDeviation() {
         console.log(typeof values[i]);
     }
     console.log(values);
+    // bereken standaarddeviatie 
     let sd = stats.calcStandardDeviation(values);
+    // print standaarddeviatie
+    document.getElementById('output').innerHTML = 'De standaarddeviatie is: ' + sd;
     // wis de ingevulde gegevens
     form.elements[0].value = '';
-    document.getElementById('output').innerHTML = 'De standaarddeviatie is: ' + sd;
 };
 
 const calcButton = document.getElementById('calculatorButton');
