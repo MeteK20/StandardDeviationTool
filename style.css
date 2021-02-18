@@ -1,3 +1,11 @@
-#calculatorForm {
+#calculator-form {
     margin-top: 50px;
+}
+
+#output {
+    font-weight: bold;
+}
+
+.inline {
+    display: inline;
 }
