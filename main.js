@@ -1,10 +1,9 @@
 // importeer Statistics class, bij de path moet je met './' beginnen als je in dezelfde map zit 
 import {Statistics} from './Statistics.js';
 
-const stats = new Statistics();
-
 // print de standaarddeviatie naar het scherm
 function printStandardDeviation() {
+    const stats = new Statistics();
     // haal het invoerveld op
     let inputField = document.getElementById('text-field');
     let values = '';
@@ -40,7 +39,7 @@ function printStandardDeviation() {
     document.getElementById('output').innerHTML = sd;
 }
 
-// invoer clear
+// invoer en foutmelding clear
 function clearInAndOut() {
     let inputField = document.getElementById('text-field');
     if (inputField.classList.contains('border-danger', 'text-danger')) {
